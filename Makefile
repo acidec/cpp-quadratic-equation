@@ -2,17 +2,17 @@ CXX = clang++
 CXXFLAGS = -g
 LD = -o
 MKBIN = mkdir bin
-RUN = bin/a.out
+RUN = bin/main.out
 CL = rm -rf bin
-all: src/a.cpp
+all: src/main.cpp
 	${CL}
 	${MKBIN}
-	${CXX} ${CXXFLAGS} src/a.cpp ${LD} bin/a.out
-run: bin/a.out
+	${CXX} ${CXXFLAGS} src/main.cpp ${LD} bin/main.out
+run: bin/main.out
 	${RUN}
-build: src/a.cpp
+build: src/main.cpp
 	${CL}
 	${MKBIN}
-	${CXX} ${CXXFLAGS} src/a.cpp ${LD} bin/a.out
+	${CXX} ${CXXFLAGS} src/main.cpp ${LD} bin/main.out
 clean:
 	${CL}

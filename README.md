@@ -11,11 +11,11 @@ You can get the source code from github by using [git-for-windows](https://git-s
 
 **Recommand [MSVC Build Tools](https://aka.ms/vs/17/release/vs_BuildTools.exe) as your C++ compiler on Windows.**
 
-Open command prompt or PowerShell, switch to the path to source code.
+Open `Developer PowerShell for VS 2022` in Start menu, and switch to the path to source code.
 ```cmd
-cd cpp-quadratic-equation
-cl a.cpp
-.\a.exe
+cd cpp-quadratic-equation/src
+cl main.cpp
+.\main.exe
 ```
 ### GNU/Linux
 Using the package manager of this distribution to get `clang` and `make`:
@@ -28,6 +28,10 @@ sudo apt install clang make
 sudo dnf in clang make
 ## openSUSE/SUSE Linux Enterprise
 sudo zypper in clang make
+## Gentoo Linux
+sudo emerge -av clang make
+    ## This may take a long time journey because clang & LLVM is a large project
+    ## It depending on your machine's performance.
 ```
 Get the source code by using Git or download the zip.
 ```bash
